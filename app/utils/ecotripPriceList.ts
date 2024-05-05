@@ -1,4 +1,4 @@
-const categories = [
+export const categories = [
 	{
 		label: 'Automobilinės prekės',
 		value: 'automotiveGoods',
@@ -967,4 +967,4 @@ export type SpecificationBooleanType = {
 
 export type SpecificationOptionType = OptionType
 
-export type ProductType = CommonProductType & TypeFlatSizeProductType | CommonProductType & TypeRangeSizeProductType
+export type ProductType = CommonProductType & (TypeFlatSizeProductType | TypeRangeSizeProductType)

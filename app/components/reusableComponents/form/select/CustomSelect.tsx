@@ -1,13 +1,16 @@
 "use client";
 import React, { ChangeEvent, ChangeEventHandler, useState } from "react";
-import { OptionType } from "../utils/ecotripPriceList";
+import { OptionType } from "../../../../utils/ecotripPriceList";
+import "./select.css";
 
 const CustomSelect = ({
   label,
   options,
+  name,
 }: {
   label: string;
   options: OptionType[];
+  name: string;
 }) => {
   const [selectedOption, setSelectedOption] = useState<OptionType | null>(null);
   const [error, setError] = useState<string>("");
@@ -28,14 +31,17 @@ const CustomSelect = ({
   };
 
   return (
-    <div>
+    <div className="custom-select">
       <label htmlFor="select">{label}</label>
       <select
         name="select"
         id={`customSelect-${label}`}
         onChange={handleChange}
-        value={selectedOption?.value ?? options[0].value}
+        value={selectedOption?.value || ""}
       >
+        <option selected disabled>
+          Select {name}
+        </option>
         {options.map((option) => (
           <option key={option.value} value={option.value}>
             {option.label}
