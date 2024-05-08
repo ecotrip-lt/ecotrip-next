@@ -966,25 +966,16 @@ const childBicycleTrailerSpecWithPrices = [
 // }
 
 export type CommonProductTypeExample = {
-  category: string;
-  productType: string;
+  category: OptionType;
+  productType: OptionType;
   size:
     | {
         from: number;
         to: number;
       }
-    | {
-        label: string;
-        value: string;
-      }
+    | OptionType
     | number;
-  specification:
-    | boolean
-    | {
-        label: string;
-        value: string;
-      }
-    | null;
+  specification: boolean | OptionType | null;
   visualInfo: string | null;
   price: number;
 };
