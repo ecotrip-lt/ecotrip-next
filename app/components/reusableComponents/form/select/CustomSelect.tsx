@@ -1,13 +1,19 @@
 "use client";
 import React, { ChangeEvent, ChangeEventHandler, useState } from "react";
-import { OptionType } from "../utils/ecotripPriceList";
+import { OptionType } from "../../../../utils/ecotripPriceList";
+import "./select.css";
+import Select from "react-select";
 
 const CustomSelect = ({
   label,
   options,
+  name,
+  onChange,
 }: {
   label: string;
   options: OptionType[];
+  name: string;
+  onChange: (value: OptionType) => void;
 }) => {
   const [selectedOption, setSelectedOption] = useState<OptionType | null>(null);
   const [error, setError] = useState<string>("");
@@ -26,22 +32,41 @@ const CustomSelect = ({
       setError("Option not found");
     }
   };
+  const handleChanges = (e) => {
+    console.log("TEST, ", e);
+  };
 
   return (
-    <div>
+    <div className="custom-select">
       <label htmlFor="select">{label}</label>
-      <select
+      {/* <ReactSelect
         name="select"
         id={`customSelect-${label}`}
         onChange={handleChange}
-        value={selectedOption?.value ?? options[0].value}
+        value={selectedOption?.value || ""}
       >
+        <option selected disabled>
+          Select {name}
+        </option>
         {options.map((option) => (
           <option key={option.value} value={option.value}>
             {option.label}
           </option>
         ))}
-      </select>
+      </Select> */}
+      <Select
+        className="basic-single"
+        classNamePrefix="select"
+        // defaultValue={colourOptions[0]}
+        isDisabled={false}
+        // isLoading={!!options.length}
+        isClearable={true}
+        // isRtl={isRtl}
+        // isSearchable={isSearchable}
+        name={name}
+        options={options}
+        onChange={handleChanges}
+      />
       {error ? <div>{error}</div> : null}
     </div>
   );
