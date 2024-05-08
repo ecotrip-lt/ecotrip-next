@@ -26,10 +26,10 @@ const CategoriesSelect = ({
             label="Categories"
             options={options}
             {...field}
-            onChange={(value, actionMeta) => {
-              console.log("CHANGING VALUE", value);
-              field.onChange(value);
-            }}
+            // onChange={(value) => {
+            //   console.log("CHANGING VALUE", value);
+            //   field.onChange(value);
+            // }}
             //   {...methods.register("category")}
           />
         );
