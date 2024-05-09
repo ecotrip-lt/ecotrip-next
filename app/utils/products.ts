@@ -1,4 +1,5 @@
-import { CommonProductTypeExample } from './ecotripPriceList';
+import { CommonProductTypeExample, OptionType } from './types';
+import { getOptions } from './getOptions';
 
 export const automotiveGoodsCategoryProducts: CommonProductTypeExample[] = [
 	// setOfWheels
@@ -1808,835 +1809,836 @@ export const goodsForChildrenCategoryProducts: CommonProductTypeExample[] = [
 	},
 ];
 
-export const motorcyclesAndAccessoriesCategoryProducts: CommonProductTypeExample[] = [
-	// scooterMoped
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Motoroleris, mopedas',
-			value: 'scooterMoped',
-		},
-		size: {
-			from: 0,
-			to: 49,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 120,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Motoroleris, mopedas',
-			value: 'scooterMoped',
-		},
-		size: {
-			from: 50,
-			to: 124,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 160,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Motoroleris, mopedas',
-			value: 'scooterMoped',
-		},
-		size: {
-			from: 125,
-			to: 249,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 200,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Motoroleris, mopedas',
-			value: 'scooterMoped',
-		},
-		size: {
-			from: 250,
-			to: Infinity,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 270,
-	},
-	// Standartinis motociklas standardMotorcycle
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Standartinis motociklas',
-			value: 'standardMotorcycle',
-		},
-		size: {
-			from: 0,
-			to: 499,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 250,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Standartinis motociklas',
-			value: 'standardMotorcycle',
-		},
-		size: {
-			from: 500,
-			to: 749,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 270,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Standartinis motociklas',
-			value: 'standardMotorcycle',
-		},
-		size: {
-			from: 750,
-			to: 999,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 300,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Standartinis motociklas',
-			value: 'standardMotorcycle',
-		},
-		size: {
-			from: 1000,
-			to: Infinity,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 330,
-	},
-	// Krosinis motociklas motocrossMotorcycle
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Krosinis motociklas',
-			value: 'motocrossMotorcycle',
-		},
-		size: {
-			from: 0,
-			to: 124,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 150,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Krosinis motociklas',
-			value: 'motocrossMotorcycle',
-		},
-		size: {
-			from: 125,
-			to: 249,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 180,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Krosinis motociklas',
-			value: 'motocrossMotorcycle',
-		},
-		size: {
-			from: 250,
-			to: 449,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 230,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Krosinis motociklas',
-			value: 'motocrossMotorcycle',
-		},
-		size: {
-			from: 450,
-			to: Infinity,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 260,
-	},
-	// Kelioninis motociklas touringMotorcycle
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Kelioninis motociklas',
-			value: 'touringMotorcycle',
-		},
-		size: {
-			from: 0,
-			to: 799,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 300,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Kelioninis motociklas',
-			value: 'touringMotorcycle',
-		},
-		size: {
-			from: 800,
-			to: 1199,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 350,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Kelioninis motociklas',
-			value: 'touringMotorcycle',
-		},
-		size: {
-			from: 1200,
-			to: 1599,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 400,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Kelioninis motociklas',
-			value: 'touringMotorcycle',
-		},
-		size: {
-			from: 1600,
-			to: Infinity,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 430,
-	},
-	// Sportinis motociklas sportsMotorcycle
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Sportinis motociklas',
-			value: 'sportsMotorcycle',
-		},
-		size: {
-			from: 0,
-			to: 599,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 230,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Sportinis motociklas',
-			value: 'sportsMotorcycle',
-		},
-		size: {
-			from: 600,
-			to: 999,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 260,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Sportinis motociklas',
-			value: 'sportsMotorcycle',
-		},
-		size: {
-			from: 1000,
-			to: Infinity,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 280,
-	},
-	// Čioperis chopper
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Čioperis',
-			value: 'chopper',
-		},
-		size: {
-			from: 0,
-			to: 799,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 300,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Čioperis',
-			value: 'chopper',
-		},
-		size: {
-			from: 800,
-			to: 1199,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 350,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Čioperis',
-			value: 'chopper',
-		},
-		size: {
-			from: 1200,
-			to: Infinity,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 400,
-	},
-	// Enduro enduro
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Enduro',
-			value: 'enduro',
-		},
-		size: {
-			from: 0,
-			to: 249,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 200,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Enduro',
-			value: 'enduro',
-		},
-		size: {
-			from: 250,
-			to: 649,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 230,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Enduro',
-			value: 'enduro',
-		},
-		size: {
-			from: 650,
-			to: 1199,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 250,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Enduro',
-			value: 'enduro',
-		},
-		size: {
-			from: 1200,
-			to: Infinity,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 280,
-	},
-	// quadBike Keturratis
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Keturratis',
-			value: 'quadBike',
-		},
-		size: {
-			from: 0,
-			to: 399,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 330,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Keturratis',
-			value: 'quadBike',
-		},
-		size: {
-			from: 400,
-			to: 799,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 360,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Keturratis',
-			value: 'quadBike',
-		},
-		size: {
-			from: 800,
-			to: 1199,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 400,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Keturratis',
-			value: 'quadBike',
-		},
-		size: {
-			from: 1200,
-			to: Infinity,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 400,
-	},
-	// Motociklo variklis motorcycleEngine
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Motociklo variklis',
-			value: 'motorcycleEngine',
-		},
-		size: {
-			from: 0,
-			to: 44,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 45,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Motociklo variklis',
-			value: 'motorcycleEngine',
-		},
-		size: {
-			from: 45,
-			to: 249,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 55,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Motociklo variklis',
-			value: 'motorcycleEngine',
-		},
-		size: {
-			from: 250,
-			to: 449,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 65,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Motociklo variklis',
-			value: 'motorcycleEngine',
-		},
-		size: {
-			from: 450,
-			to: 599,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 80,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Motociklo variklis',
-			value: 'motorcycleEngine',
-		},
-		size: {
-			from: 600,
-			to: 999,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 90,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Motociklo variklis',
-			value: 'motorcycleEngine',
-		},
-		size: {
-			from: 1000,
-			to: 1199,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 110,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Motociklo variklis',
-			value: 'motorcycleEngine',
-		},
-		size: {
-			from: 1200,
-			to: 1599,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 150,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Motociklo variklis',
-			value: 'motorcycleEngine',
-		},
-		size: {
-			from: 1600,
-			to: Infinity,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 190,
-	},
-	// motorcycleGearbox Motociklo pavarų dėžė
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Motociklo pavarų dėžė',
-			value: 'motorcycleGearbox',
-		},
-		size: {
-			from: 0,
-			to: 44,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 45,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Motociklo pavarų dėžė',
-			value: 'motorcycleGearbox',
-		},
-		size: {
-			from: 45,
-			to: 249,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 55,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Motociklo pavarų dėžė',
-			value: 'motorcycleGearbox',
-		},
-		size: {
-			from: 250,
-			to: 449,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 65,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Motociklo pavarų dėžė',
-			value: 'motorcycleGearbox',
-		},
-		size: {
-			from: 450,
-			to: 599,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 80,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Motociklo pavarų dėžė',
-			value: 'motorcycleGearbox',
-		},
-		size: {
-			from: 600,
-			to: 999,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 90,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Motociklo pavarų dėžė',
-			value: 'motorcycleGearbox',
-		},
-		size: {
-			from: 1000,
-			to: 1199,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 110,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Motociklo pavarų dėžė',
-			value: 'motorcycleGearbox',
-		},
-		size: {
-			from: 1200,
-			to: 1599,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 150,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Motociklo pavarų dėžė',
-			value: 'motorcycleGearbox',
-		},
-		size: {
-			from: 1600,
-			to: Infinity,
-		},
-		specification: null,
-		visualInfo: null,
-		price: 190,
-	},
-	// goodsForMotorcycles Prekės motociklams
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Prekės motociklams',
-			value: 'goodsForMotorcycles',
-		},
-		size: {
-			label: 'Motociklo krepšys',
-			value: 'motorcycleBag',
-		},
-		specification: null,
-		visualInfo: null,
-		price: 30,
-	},
-	{
-		category: {
-			label: 'Motociklai ir priedai',
-			value: 'motorcyclesAndAccessories',
-		},
-		productType: {
-			label: 'Prekės motociklams',
-			value: 'goodsForMotorcycles',
-		},
-		size: {
-			label: 'Duslintuvas',
-			value: 'muffler',
-		},
-		specification: null,
-		visualInfo: null,
-		price: 40,
-	},
-];
+export const motorcyclesAndAccessoriesCategoryProducts: CommonProductTypeExample[] =
+	[
+		// scooterMoped
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Motoroleris, mopedas',
+				value: 'scooterMoped',
+			},
+			size: {
+				from: 0,
+				to: 49,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 120,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Motoroleris, mopedas',
+				value: 'scooterMoped',
+			},
+			size: {
+				from: 50,
+				to: 124,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 160,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Motoroleris, mopedas',
+				value: 'scooterMoped',
+			},
+			size: {
+				from: 125,
+				to: 249,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 200,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Motoroleris, mopedas',
+				value: 'scooterMoped',
+			},
+			size: {
+				from: 250,
+				to: Infinity,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 270,
+		},
+		// Standartinis motociklas standardMotorcycle
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Standartinis motociklas',
+				value: 'standardMotorcycle',
+			},
+			size: {
+				from: 0,
+				to: 499,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 250,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Standartinis motociklas',
+				value: 'standardMotorcycle',
+			},
+			size: {
+				from: 500,
+				to: 749,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 270,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Standartinis motociklas',
+				value: 'standardMotorcycle',
+			},
+			size: {
+				from: 750,
+				to: 999,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 300,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Standartinis motociklas',
+				value: 'standardMotorcycle',
+			},
+			size: {
+				from: 1000,
+				to: Infinity,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 330,
+		},
+		// Krosinis motociklas motocrossMotorcycle
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Krosinis motociklas',
+				value: 'motocrossMotorcycle',
+			},
+			size: {
+				from: 0,
+				to: 124,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 150,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Krosinis motociklas',
+				value: 'motocrossMotorcycle',
+			},
+			size: {
+				from: 125,
+				to: 249,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 180,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Krosinis motociklas',
+				value: 'motocrossMotorcycle',
+			},
+			size: {
+				from: 250,
+				to: 449,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 230,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Krosinis motociklas',
+				value: 'motocrossMotorcycle',
+			},
+			size: {
+				from: 450,
+				to: Infinity,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 260,
+		},
+		// Kelioninis motociklas touringMotorcycle
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Kelioninis motociklas',
+				value: 'touringMotorcycle',
+			},
+			size: {
+				from: 0,
+				to: 799,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 300,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Kelioninis motociklas',
+				value: 'touringMotorcycle',
+			},
+			size: {
+				from: 800,
+				to: 1199,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 350,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Kelioninis motociklas',
+				value: 'touringMotorcycle',
+			},
+			size: {
+				from: 1200,
+				to: 1599,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 400,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Kelioninis motociklas',
+				value: 'touringMotorcycle',
+			},
+			size: {
+				from: 1600,
+				to: Infinity,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 430,
+		},
+		// Sportinis motociklas sportsMotorcycle
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Sportinis motociklas',
+				value: 'sportsMotorcycle',
+			},
+			size: {
+				from: 0,
+				to: 599,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 230,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Sportinis motociklas',
+				value: 'sportsMotorcycle',
+			},
+			size: {
+				from: 600,
+				to: 999,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 260,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Sportinis motociklas',
+				value: 'sportsMotorcycle',
+			},
+			size: {
+				from: 1000,
+				to: Infinity,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 280,
+		},
+		// Čioperis chopper
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Čioperis',
+				value: 'chopper',
+			},
+			size: {
+				from: 0,
+				to: 799,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 300,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Čioperis',
+				value: 'chopper',
+			},
+			size: {
+				from: 800,
+				to: 1199,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 350,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Čioperis',
+				value: 'chopper',
+			},
+			size: {
+				from: 1200,
+				to: Infinity,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 400,
+		},
+		// Enduro enduro
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Enduro',
+				value: 'enduro',
+			},
+			size: {
+				from: 0,
+				to: 249,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 200,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Enduro',
+				value: 'enduro',
+			},
+			size: {
+				from: 250,
+				to: 649,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 230,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Enduro',
+				value: 'enduro',
+			},
+			size: {
+				from: 650,
+				to: 1199,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 250,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Enduro',
+				value: 'enduro',
+			},
+			size: {
+				from: 1200,
+				to: Infinity,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 280,
+		},
+		// quadBike Keturratis
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Keturratis',
+				value: 'quadBike',
+			},
+			size: {
+				from: 0,
+				to: 399,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 330,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Keturratis',
+				value: 'quadBike',
+			},
+			size: {
+				from: 400,
+				to: 799,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 360,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Keturratis',
+				value: 'quadBike',
+			},
+			size: {
+				from: 800,
+				to: 1199,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 400,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Keturratis',
+				value: 'quadBike',
+			},
+			size: {
+				from: 1200,
+				to: Infinity,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 400,
+		},
+		// Motociklo variklis motorcycleEngine
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Motociklo variklis',
+				value: 'motorcycleEngine',
+			},
+			size: {
+				from: 0,
+				to: 44,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 45,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Motociklo variklis',
+				value: 'motorcycleEngine',
+			},
+			size: {
+				from: 45,
+				to: 249,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 55,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Motociklo variklis',
+				value: 'motorcycleEngine',
+			},
+			size: {
+				from: 250,
+				to: 449,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 65,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Motociklo variklis',
+				value: 'motorcycleEngine',
+			},
+			size: {
+				from: 450,
+				to: 599,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 80,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Motociklo variklis',
+				value: 'motorcycleEngine',
+			},
+			size: {
+				from: 600,
+				to: 999,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 90,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Motociklo variklis',
+				value: 'motorcycleEngine',
+			},
+			size: {
+				from: 1000,
+				to: 1199,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 110,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Motociklo variklis',
+				value: 'motorcycleEngine',
+			},
+			size: {
+				from: 1200,
+				to: 1599,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 150,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Motociklo variklis',
+				value: 'motorcycleEngine',
+			},
+			size: {
+				from: 1600,
+				to: Infinity,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 190,
+		},
+		// motorcycleGearbox Motociklo pavarų dėžė
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Motociklo pavarų dėžė',
+				value: 'motorcycleGearbox',
+			},
+			size: {
+				from: 0,
+				to: 44,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 45,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Motociklo pavarų dėžė',
+				value: 'motorcycleGearbox',
+			},
+			size: {
+				from: 45,
+				to: 249,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 55,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Motociklo pavarų dėžė',
+				value: 'motorcycleGearbox',
+			},
+			size: {
+				from: 250,
+				to: 449,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 65,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Motociklo pavarų dėžė',
+				value: 'motorcycleGearbox',
+			},
+			size: {
+				from: 450,
+				to: 599,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 80,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Motociklo pavarų dėžė',
+				value: 'motorcycleGearbox',
+			},
+			size: {
+				from: 600,
+				to: 999,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 90,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Motociklo pavarų dėžė',
+				value: 'motorcycleGearbox',
+			},
+			size: {
+				from: 1000,
+				to: 1199,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 110,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Motociklo pavarų dėžė',
+				value: 'motorcycleGearbox',
+			},
+			size: {
+				from: 1200,
+				to: 1599,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 150,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Motociklo pavarų dėžė',
+				value: 'motorcycleGearbox',
+			},
+			size: {
+				from: 1600,
+				to: Infinity,
+			},
+			specification: null,
+			visualInfo: null,
+			price: 190,
+		},
+		// goodsForMotorcycles Prekės motociklams
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Prekės motociklams',
+				value: 'goodsForMotorcycles',
+			},
+			size: {
+				label: 'Motociklo krepšys',
+				value: 'motorcycleBag',
+			},
+			specification: null,
+			visualInfo: null,
+			price: 30,
+		},
+		{
+			category: {
+				label: 'Motociklai ir priedai',
+				value: 'motorcyclesAndAccessories',
+			},
+			productType: {
+				label: 'Prekės motociklams',
+				value: 'goodsForMotorcycles',
+			},
+			size: {
+				label: 'Duslintuvas',
+				value: 'muffler',
+			},
+			specification: null,
+			visualInfo: null,
+			price: 40,
+		},
+	];
 
 export const flatScreenTvCategoryProducts: CommonProductTypeExample[] = [
 	{
@@ -3218,3 +3220,68 @@ export const removalsCategoryProducts: CommonProductTypeExample[] = [
 		price: 115,
 	},
 ];
+
+export const allProducts: CommonProductTypeExample[] = [
+	...automotiveGoodsCategoryProducts,
+	...bicyclesAndScootersCategoryProducts,
+	...goodsForChildrenCategoryProducts,
+	...motorcyclesAndAccessoriesCategoryProducts,
+	...flatScreenTvCategoryProducts,
+	...householdAppliancesCategoryProducts,
+	...gardenEquipmentCategoryProducts,
+	...shipmentsCategoryProducts,
+	...removalsCategoryProducts,
+];
+
+export const categoriesOptions: OptionType[] = getOptions(
+	allProducts.map((product) => product.category)
+);
+
+export const automotiveGoodsCategoryProductTypesOptions: OptionType[] =
+	getOptions(
+		automotiveGoodsCategoryProducts
+			.map((product) => product.productType)
+			.filter((obj) => obj !== null) as OptionType[]
+	);
+
+export const bicyclesAndScootersCategoryProductTypesOptions: OptionType[] =
+	getOptions(
+		bicyclesAndScootersCategoryProducts
+			.map((product) => product.productType)
+			.filter((obj) => obj !== null) as OptionType[]
+	);
+
+export const goodsForChildrenCategoryProductTypesOptions: OptionType[] =
+	getOptions(
+		goodsForChildrenCategoryProducts
+			.map((product) => product.productType)
+			.filter((obj) => obj !== null) as OptionType[]
+	);
+
+export const motorcyclesAndAccessoriesCategoryProductTypesOptions: OptionType[] =
+	getOptions(
+		motorcyclesAndAccessoriesCategoryProducts
+			.map((product) => product.productType)
+			.filter((obj) => obj !== null) as OptionType[]
+	);
+
+export const householdAppliancesCategoryProductTypesOptions: OptionType[] =
+	getOptions(
+		householdAppliancesCategoryProducts
+			.map((product) => product.productType)
+			.filter((obj) => obj !== null) as OptionType[]
+	);
+
+export const gardenEquipmentCategoryProductTypesOptions: OptionType[] =
+	getOptions(
+		gardenEquipmentCategoryProducts
+			.map((product) => product.productType)
+			.filter((obj) => obj !== null) as OptionType[]
+	);
+
+// Size Units x = number
+// Radius Rx
+// CM3
+// Coliai
+// KG
+// M3

@@ -1,28 +1,23 @@
-"use client";
+'use client';
 
-import CategoriesSelect from "@/app/components/CategoriesSelect";
-import { FormFields } from "@/app/page";
-import React from "react";
-import { Form, useForm } from "react-hook-form";
+// import CategoriesSelect from '@/app/components/CategoriesSelect';
+import { FormFields } from '@/app/page';
+import { categoriesOptions } from '@/app/utils/products';
+import React from 'react';
+// import { Form, useForm } from 'react-hook-form';
 
-const FirstStep = ({}: {}) => {
-  const methods = useForm<FormFields>({
-    defaultValues: {
-      category: null,
-    },
-  });
-
-  const formValues = methods.watch();
-
-  console.log("form", formValues);
-
-  return (
-    <Form {...methods}>
-      <form>
-        <CategoriesSelect methods={methods} />
-      </form>
-    </Form>
-  );
+const FirstStep = () => {
+	return (
+		<div>
+			{categoriesOptions
+				? categoriesOptions.map((option) => (
+						<div key={option.value}>
+							{option.label} {'=>'} {option.value}
+						</div>
+				  ))
+				: null}
+		</div>
+	);
 };
 
 export default FirstStep;
