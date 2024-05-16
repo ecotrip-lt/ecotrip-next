@@ -1,8 +1,8 @@
 "use client";
 import React, { ChangeEvent, ChangeEventHandler, useState } from "react";
-import { OptionType } from "../../../../utils/ecotripPriceList";
 import "./select.css";
 import Select from "react-select";
+import { OptionType } from "@/app/utils/types";
 
 const CustomSelect = ({
   label,
@@ -37,8 +37,8 @@ const CustomSelect = ({
   };
 
   return (
-    <div className="custom-select">
-      <label htmlFor="select">{label}</label>
+    <div className='custom-select'>
+      <label htmlFor='select'>{label}</label>
       {/* <ReactSelect
         name="select"
         id={`customSelect-${label}`}
@@ -55,8 +55,8 @@ const CustomSelect = ({
         ))}
       </Select> */}
       <Select
-        className="basic-single"
-        classNamePrefix="select"
+        className='basic-single'
+        classNamePrefix='select'
         // defaultValue={colourOptions[0]}
         isDisabled={false}
         // isLoading={!!options.length}
