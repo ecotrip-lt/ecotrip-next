@@ -1,73 +1,44 @@
-"use client";
-import React, { ChangeEvent, ChangeEventHandler, useState } from "react";
-import { OptionType } from "../../../../utils/ecotripPriceList";
-import "./select.css";
+import { OptionType } from "@/app/utils/ecotripPriceList";
+import React from "react";
+
 import Select from "react-select";
 
+// const Checkbox = ({ children, ...props }: JSX.IntrinsicElements["input"]) => (
+//   <label style={{ marginRight: "1em" }}>
+//     <input type="checkbox" {...props} />
+//     {children}
+//   </label>
+// );
+
 const CustomSelect = ({
-  label,
   options,
+  isDisabled,
+  isLoading,
+  isClearable,
   name,
-  onChange,
+  placeholder,
 }: {
-  label: string;
   options: OptionType[];
+  isDisabled: boolean;
+  isLoading: boolean;
+  isClearable: boolean;
   name: string;
-  onChange: (value: OptionType) => void;
+  placeholder?: string;
 }) => {
-  const [selectedOption, setSelectedOption] = useState<OptionType | null>(null);
-  const [error, setError] = useState<string>("");
-
-  const handleChange: ChangeEventHandler<HTMLSelectElement> = (
-    e: ChangeEvent<HTMLSelectElement>
-  ) => {
-    const foundOption = options.find(
-      (option) => option.value === e.target.value
-    );
-    if (foundOption) {
-      console.log("Selected Option", foundOption);
-
-      setSelectedOption(foundOption);
-    } else {
-      setError("Option not found");
-    }
-  };
-  const handleChanges = (e) => {
-    console.log("TEST, ", e);
-  };
-
   return (
-    <div className="custom-select">
-      <label htmlFor="select">{label}</label>
-      {/* <ReactSelect
-        name="select"
-        id={`customSelect-${label}`}
-        onChange={handleChange}
-        value={selectedOption?.value || ""}
-      >
-        <option selected disabled>
-          Select {name}
-        </option>
-        {options.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.label}
-          </option>
-        ))}
-      </Select> */}
+    <div className="w-80">
       <Select
         className="basic-single"
         classNamePrefix="select"
-        // defaultValue={colourOptions[0]}
-        isDisabled={false}
-        // isLoading={!!options.length}
-        isClearable={true}
-        // isRtl={isRtl}
-        // isSearchable={isSearchable}
+        placeholder={placeholder ?? `Select ${name}`}
+        isDisabled={isDisabled}
+        isLoading={isLoading}
+        isClearable={isClearable}
+        isRtl={false}
+        isSearchable={false}
         name={name}
         options={options}
-        onChange={handleChanges}
       />
-      {error ? <div>{error}</div> : null}
     </div>
   );
 };

@@ -6,6 +6,7 @@ import { OptionType } from "./ecotripPriceList";
 
 const useCategories = () => {
   const [categories, setCategories] = useState<OptionType[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const getCategoriesSelectOptions = async () => {
     const response = await fetchWrapper("ecotrip-pricelist", {
@@ -17,12 +18,14 @@ const useCategories = () => {
     const data = await response.json();
     console.log("data", data);
     setCategories(data);
+    setIsLoading(false);
   };
 
   useEffect(() => {
+    setIsLoading(true);
     getCategoriesSelectOptions();
   }, []);
 
-  return categories;
+  return { categories, isLoading };
 };
 export default useCategories;
