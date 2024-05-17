@@ -1,15 +1,12 @@
-import FirstStep from "./pages/steps/FirstStep";
 import "./styles/main.css";
-import { OptionType } from "./utils/ecotripPriceList";
-
-export type FormFields = {
-  category: OptionType | null;
-};
+import CustomLink from "./components/reusableComponents/form/select/CustomLink";
 
 export default function Home() {
   return (
-    <main className="main">
-      <FirstStep />
+    <main className='main'>
+      <h1>Home page</h1>
+      <p>Addresses here</p>
+      <CustomLink href='/form' label='Go to Form' />
     </main>
   );
 }
