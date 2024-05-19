@@ -1,5 +1,5 @@
 import React from "react";
-import CustomLink from "../components/reusableComponents/form/select/CustomLink";
+import CustomLink from "../components/CustomLink";
 
 const Form = () => {
   return (
