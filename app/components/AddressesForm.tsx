@@ -8,8 +8,10 @@ import PrimaryButton from './buttons/PrimaryButton';
 
 const AddressesForm = ({
 	methods,
+	setGlobalFormValues,
 }: {
 	methods: UseFormReturn<AddressesFormType, any, undefined>;
+	setGlobalFormValues: (name: string, value: any) => void;
 }) => {
 	const router = useRouter();
 	const { watch, control, handleSubmit } = methods;
@@ -25,12 +27,17 @@ const AddressesForm = ({
 
 	const onSubmit: SubmitHandler<AddressesFormType> = (data) => {
 		// TODO Response should return navigation path
-		const { path } = checkPostCodes({
+		const { path, foundPostcode } = checkPostCodes({
 			address: {
 				from: data.addressFrom?.label ?? '',
 				to: data.addressTo?.label ?? '',
 			},
 		});
+		setGlobalFormValues('addressForm', {
+			addressFrom: data.addressFrom || null,
+			addressTo: data.addressTo || null,
+		});
+		setGlobalFormValues('foundPostCodeAddress', foundPostcode);
 		if (path) {
 			navigate(path);
 		}

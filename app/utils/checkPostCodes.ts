@@ -1,3 +1,4 @@
+import { UKPostcodeType } from './types';
 import UK_POST_CODES from './ukPostCodes';
 
 type CheckPostCodesProps = {
@@ -9,6 +10,7 @@ type CheckPostCodesProps = {
 
 export const checkPostCodes = ({ address }: CheckPostCodesProps) => {
 	let path: string = '';
+	let foundPostcode: UKPostcodeType | null = null;
 
 	const formattedData = Object.entries(address).map(([key, value]) => {
 		return {
@@ -31,10 +33,13 @@ export const checkPostCodes = ({ address }: CheckPostCodesProps) => {
 
 	const fromObj = formattedData.find((obj) => obj.direction === 'from');
 
-	const isStandartPrices = !filteredPostcodes.some((code) =>
-		fromObj?.value.toUpperCase().includes(code)
-	);
+	foundPostcode =
+		UK_POST_CODES.find((ukObj) => {
+			return fromObj?.value.toUpperCase().includes(ukObj.postcode);
+		}) || null;
 
+	const isStandartPrices = foundPostcode?.basicPrice === 'Ecotrip pricelist';
+	console.log('isStandartPrices ===', isStandartPrices);
 	if (isStandartPrices) {
 		path = '/address-form/standart-prices';
 	} else {
@@ -43,5 +48,6 @@ export const checkPostCodes = ({ address }: CheckPostCodesProps) => {
 
 	return {
 		path,
+		foundPostcode,
 	};
 };
