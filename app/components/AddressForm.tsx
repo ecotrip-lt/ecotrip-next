@@ -9,6 +9,7 @@ import PrimaryButton from './PrimaryButton';
 import FieldContainer from './FieldContainer';
 import CustomInput from './CustomInput';
 import CheckboxWithLabel from './CheckboxWithLabel';
+import SecondaryButton from './SecondaryButton';
 
 type AddressFormProps = {
 	addressFrom: string;
@@ -95,11 +96,11 @@ const AddressForm = () => {
 					</p>
 				</CheckboxWithLabel>
 				<div className='w-full flex'>
-					<PrimaryButton
+					<SecondaryButton
 						type='submit'
 						className='ml-auto'>
 						Patvirtintinti adresus
-					</PrimaryButton>
+					</SecondaryButton>
 				</div>
 			</form>
 		</Step>

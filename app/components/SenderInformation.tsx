@@ -1,9 +1,17 @@
 import React from 'react';
+import Step from './Step';
+import ClientInformationForm from './ClientInformationForm';
 
-type Props = {};
+type SenderInformationProps = {};
 
-const SenderInformation = (props: Props) => {
-	return <div>SenderInformation</div>;
+const SenderInformation = (props: SenderInformationProps) => {
+	return (
+		<Step
+			title='Siuntos paėmimo / siuntėjo informacija'
+			step={4}>
+			<ClientInformationForm client='sender' />
+		</Step>
+	);
 };
 
 export default SenderInformation;
