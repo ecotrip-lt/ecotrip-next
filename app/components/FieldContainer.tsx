@@ -6,11 +6,21 @@ type Props = {
 	children: React.ReactNode;
 	description?: string;
 	className?: string;
+	width?: 'full' | 'half';
 };
 
-const FieldContainer = ({ label, children, description, className }: Props) => {
+const FieldContainer = ({
+	label,
+	children,
+	description,
+	className,
+	width = 'half',
+}: Props) => {
 	return (
-		<div className={`field-container ${className ? className : ''}`}>
+		<div
+			className={`field-container ${className ? className : ''} ${
+				width === 'half' ? 'w-[360px]' : 'w-full'
+			}`}>
 			{label ? <label htmlFor=''>{label}</label> : null}
 			{children}
 			{description ? <p>{description}</p> : null}
