@@ -39,7 +39,6 @@ const AddressForm = () => {
 
 	return (
 		<Step
-			className='mb-[30px]'
 			title='Paėmimo ir pristatymo adresai'
 			step={1}>
 			<form onSubmit={handleSubmit(onSubmit)}>
