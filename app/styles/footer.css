@@ -7,6 +7,43 @@
 .footer-container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 160px;
+  padding: 70px 160px;
   color: white;
+}
+
+.link-list-container {
+  width: 24%;
+  border: 1px solid black;
+}
+
+.link-list-title {
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16.1px;
+  text-align: left;
+  color: #fff;
+  margin-bottom: 32px;
+}
+
+.link-list-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style-type: disc;
+}
+
+.link-list-list li {
+  margin-left: 18px;
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16.1px;
+  text-align: left;
+  color: #fff;
+}
+
+.link-list-list li a:hover {
+  color: #9aa61e;
+  text-decoration: underline;
 }
