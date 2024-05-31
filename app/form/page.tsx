@@ -6,6 +6,7 @@ import '../styles/main.css';
 import TransportationDates from '../components/TransportationDates';
 import SenderInformation from '../components/SenderInformation';
 import RecipientInformation from '../components/RecipientInformation';
+import PayerInformation from '../components/PayerInformation';
 
 // formos suma - 10% + additionalCharges
 const Form = () => {
@@ -20,6 +21,8 @@ const Form = () => {
 			<SenderInformation />
 			<Divider />
 			<RecipientInformation />
+			<Divider />
+			<PayerInformation />
 			<Divider />
 		</div>
 	);
