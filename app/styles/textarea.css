@@ -1,0 +1,32 @@
+.custom-textarea label {
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 16.1px;
+	text-align: left;
+	color: #7a7776;
+}
+
+.custom-textarea textarea {
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 16.1px;
+	text-align: left;
+	color: #7a7776;
+}
+
+.custom-textarea textarea::placeholder {
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 16.1px;
+	text-align: left;
+	color: #7a777680;
+}
+
+.custom-textarea textarea:focus-visible {
+	border-color: #9aa61e;
+	outline: none;
+	outline-offset: 0px;
+}

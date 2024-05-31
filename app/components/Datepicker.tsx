@@ -27,37 +27,43 @@ const Datepicker = ({
 		<FieldContainer
 			label={label}
 			className={className}>
-			<div className='flex gap-4'>
-				<StyledSelect
-					placeholder='YYYY'
-					options={options?.years || []}
-					onChange={(newValue) => {
-						// @ts-ignore
-						const year = (newValue?.value as string) || '';
-						handleDateChange?.('year', year);
-					}}
-					isDisabled={fiedsDisabled}
-				/>
-				<StyledSelect
-					placeholder='MM'
-					options={options?.months || []}
-					onChange={(newValue) => {
-						// @ts-ignore
-						const month = (newValue?.value as string) || '';
-						handleDateChange?.('month', month);
-					}}
-					isDisabled={fiedsDisabled}
-				/>
-				<StyledSelect
-					placeholder='DD'
-					options={options?.days || []}
-					onChange={(newValue) => {
-						// @ts-ignore
-						const day = (newValue?.value as string) || '';
-						handleDateChange?.('day', day);
-					}}
-					isDisabled={fiedsDisabled}
-				/>
+			<div className='flex gap-4 w-full'>
+				<div className='flex-1'>
+					<StyledSelect
+						placeholder='YYYY'
+						options={options?.years || []}
+						onChange={(newValue) => {
+							// @ts-ignore
+							const year = (newValue?.value as string) || '';
+							handleDateChange?.('year', year);
+						}}
+						isDisabled={fiedsDisabled}
+					/>
+				</div>
+				<div className='flex-1'>
+					<StyledSelect
+						placeholder='MM'
+						options={options?.months || []}
+						onChange={(newValue) => {
+							// @ts-ignore
+							const month = (newValue?.value as string) || '';
+							handleDateChange?.('month', month);
+						}}
+						isDisabled={fiedsDisabled}
+					/>
+				</div>
+				<div className='flex-1'>
+					<StyledSelect
+						placeholder='DD'
+						options={options?.days || []}
+						onChange={(newValue) => {
+							// @ts-ignore
+							const day = (newValue?.value as string) || '';
+							handleDateChange?.('day', day);
+						}}
+						isDisabled={fiedsDisabled}
+					/>
+				</div>
 			</div>
 		</FieldContainer>
 	);
