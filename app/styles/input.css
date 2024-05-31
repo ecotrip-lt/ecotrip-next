@@ -25,6 +25,16 @@
 	text-align: left;
 	width: 100%;
 	height: 30px;
+	box-sizing: border-box;
+	border: none;
+}
+
+.input-container:focus-within {
+	border-color: #9aa61e;
+}
+
+.input-container input:focus {
+	outline: none;
 }
 
 .input-container input:focus-visible {
@@ -32,3 +42,8 @@
 	outline: none;
 	outline-offset: 0px;
 }
+
+/* 
+.input-container input:focus-visible + .input-container {
+	border: 1px solid #9aa61e;
+} */

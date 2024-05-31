@@ -1,0 +1,26 @@
+.custom-label-text {
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 16.1px;
+	text-align: left;
+	color: #7a7776;
+}
+
+.checkbox {
+	width: 1.2rem;
+	height: 1.2rem;
+	border-radius: 5px;
+	background-color: #fff;
+}
+
+.checkbox:checked,
+.checkbox[aria-checked='true'] {
+	background-color: #9aa61e !important;
+}
+
+.form-control .label {
+	align-items: center;
+	justify-content: end;
+	gap: 4px;
+}

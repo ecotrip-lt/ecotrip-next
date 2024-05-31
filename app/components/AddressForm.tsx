@@ -8,6 +8,7 @@ import { Address } from '../utils/types';
 import PrimaryButton from './PrimaryButton';
 import FieldContainer from './FieldContainer';
 import CustomInput from './CustomInput';
+import CheckboxWithLabel from './CheckboxWithLabel';
 
 type AddressFormProps = {
 	addressFrom: string;
@@ -38,6 +39,7 @@ const AddressForm = () => {
 
 	return (
 		<Step
+			className='mb-[30px]'
 			title='Paėmimo ir pristatymo adresai'
 			step={1}>
 			<form onSubmit={handleSubmit(onSubmit)}>
@@ -49,6 +51,7 @@ const AddressForm = () => {
 							name={Address.From}
 							defaultValue=''
 							onChange={onChange}
+							placeholder='Įveskite gatvę, namo numerį, miestą'
 						/>
 					</FieldContainer>
 					<FieldContainer
@@ -69,6 +72,7 @@ const AddressForm = () => {
 							name={Address.To}
 							defaultValue=''
 							onChange={onChange}
+							placeholder='Įveskite gatvę, namo numerį, miestą'
 						/>
 					</FieldContainer>
 					<FieldContainer
@@ -81,7 +85,23 @@ const AddressForm = () => {
 					</FieldContainer>
 				</div>
 
-				<PrimaryButton type='submit'>Click</PrimaryButton>
+				<CheckboxWithLabel className='mb-[30px]'>
+					<p>
+						Noriu pasinaudoti EcoTrip adreso paslauga.{' '}
+						<a
+							href='/'
+							className='text-primary underline'>
+							Kas yra EcoTrip adreso paslauga ir kaip ją naudotis?
+						</a>
+					</p>
+				</CheckboxWithLabel>
+				<div className='w-full flex'>
+					<PrimaryButton
+						type='submit'
+						className='ml-auto'>
+						Patvirtintinti adresus
+					</PrimaryButton>
+				</div>
 			</form>
 		</Step>
 	);

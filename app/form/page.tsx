@@ -12,6 +12,7 @@ const Form = () => {
 			<Breadcrumds />
 			<Divider />
 			<AddressForm />
+			<Divider />
 		</div>
 	);
 };
