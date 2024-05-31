@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import AddressesForm from './AddressesForm';
 import { FormProvider, useForm } from 'react-hook-form';
 import { AddressesFormType, UKPostcodeType } from '../utils/types';
 
@@ -39,10 +38,10 @@ const GlobalForm = () => {
 	return (
 		<>
 			<FormProvider {...methods}>
-				<AddressesForm
+				{/* <AddressesForm
 					methods={addressMethods}
 					setGlobalFormValues={setGlobalFormValues}
-				/>
+				/> */}
 			</FormProvider>
 		</>
 	);

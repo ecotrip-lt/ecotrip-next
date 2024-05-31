@@ -1,15 +1,10 @@
-import Breadcrumds from "./components/Breadcrumds";
-import Divider from "./components/Divider";
-import AddressForm from "./components/AddressForm";
-
-import "./styles/main.css";
+import './styles/main.css';
+import Spinner from './components/Spinner';
 
 export default function Home() {
-  return (
-    <main className='main'>
-      <Breadcrumds />
-      <Divider />
-      <AddressForm />
-    </main>
-  );
+	return (
+		<main className='main'>
+			<Spinner />
+		</main>
+	);
 }
