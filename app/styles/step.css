@@ -24,3 +24,37 @@
 	box-sizing: border-box;
 	padding: 0;
 }
+
+@media (max-width: 640px) {
+	.step-columns {
+		display: flex;
+		flex-direction: column;
+		margin: 36px 0;
+	}
+
+	.title-column {
+		width: 100%;
+		margin-bottom: 34px;
+	}
+
+	.content-column {
+		width: 100%;
+		box-sizing: border-box;
+		padding: 0;
+	}
+
+	.address-fields-wrapper,
+	.datepicker-fields-wrapper {
+		flex-direction: column;
+	}
+
+	.datepicker-fields-wrapper {
+		margin-bottom: 0 !important;
+		gap: 24px;
+	}
+
+	.payer-fields-wrapper {
+		flex-direction: column;
+		gap: 24px;
+	}
+}

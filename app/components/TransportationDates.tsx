@@ -35,32 +35,20 @@ const TransportationDates = ({}: TransportationDatesProps) => {
 		<Step
 			step={3}
 			title='Siuntos pervežimo datos'>
-			<>
-				<div className='flex mb-[30px] justify-between'>
-					<Datepicker
-						className='w-1/2'
-						fiedsDisabled={false}
-						label='Siuntos paėmimo data'
-						handleDateChange={handleDateChange}
-						options={options}
-					/>
-					<Datepicker
-						className='w-1/2'
-						fiedsDisabled={true}
-						label='Siuntos pristatymo data (numatoma)'
-					/>
-				</div>
-				<CheckboxWithLabel>
-					<p>
-						Noriu užsakyti prekės nupirkimo paslaugą.{' '}
-						<a
-							href='/'
-							className='text-primary underline'>
-							Kas yra prekės nupirkimo paslauga ir kaip ją naudotis?
-						</a>
-					</p>
-				</CheckboxWithLabel>
-			</>
+			<div className='flex justify-between datepicker-fields-wrapper'>
+				<Datepicker
+					className='w-1/2'
+					fiedsDisabled={false}
+					label='Siuntos paėmimo data'
+					handleDateChange={handleDateChange}
+					options={options}
+				/>
+				<Datepicker
+					className='w-1/2'
+					fiedsDisabled={true}
+					label='Siuntos pristatymo data (numatoma)'
+				/>
+			</div>
 		</Step>
 	);
 };

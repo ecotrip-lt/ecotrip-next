@@ -5,12 +5,14 @@ import { useGoogleMapsScript, Libraries } from 'use-google-maps-script';
 import { Address } from '../utils/types';
 import { OptionType } from '../utils/types';
 import StyledSelect from './StyledSelect';
+import ErrorMessage from './ErrorMessage';
 
 interface ISearchBoxProps {
 	defaultValue: string;
 	name: Address;
 	placeholder?: string;
 	onChange: (name: Address, value: string) => void;
+	errorMessage?: string;
 }
 
 const libraries: Libraries = ['places'];
@@ -20,6 +22,7 @@ export const SearchBox = ({
 	name,
 	onChange,
 	placeholder,
+	errorMessage,
 }: ISearchBoxProps) => {
 	const { isLoaded, loadError } = useGoogleMapsScript({
 		googleMapsApiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY ?? '',
@@ -35,6 +38,7 @@ export const SearchBox = ({
 			name={name}
 			onChange={onChange}
 			placeholder={placeholder}
+			errorMessage={errorMessage}
 		/>
 	);
 };
@@ -44,6 +48,7 @@ const ReadySearchBox = ({
 	name,
 	onChange,
 	placeholder,
+	errorMessage,
 }: ISearchBoxProps) => {
 	const {
 		ready,
@@ -67,7 +72,7 @@ const ReadySearchBox = ({
 		<div className='w-full'>
 			<StyledSelect
 				name={name}
-				className='w-full placeholder-{#7a777680}'
+				className={`w-full placeholder-{#7a777680}`}
 				isDisabled={!ready}
 				isClearable={true}
 				onInputChange={(value) => {
@@ -92,6 +97,7 @@ const ReadySearchBox = ({
 				}
 				defaultInputValue=''
 				placeholder={placeholder}
+				errorMessage={errorMessage}
 			/>
 		</div>
 	);

@@ -27,7 +27,7 @@ const Datepicker = ({
 		<FieldContainer
 			label={label}
 			className={className}>
-			<div className='flex gap-4 w-full'>
+			<div className='flex gap-4 w-full datepicker-container'>
 				<div className='flex-1'>
 					<StyledSelect
 						placeholder='YYYY'

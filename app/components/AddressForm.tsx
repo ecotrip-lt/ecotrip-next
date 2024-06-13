@@ -43,7 +43,7 @@ const AddressForm = () => {
 			title='Paėmimo ir pristatymo adresai'
 			step={1}>
 			<form onSubmit={handleSubmit(onSubmit)}>
-				<div className='flex gap-[22px] items-center mb-[30px]'>
+				<div className='flex gap-[22px] items-center mb-[30px] address-fields-wrapper'>
 					<FieldContainer
 						label='Paėmimo adresas:'
 						description='Adresas iš kur paįmama siunta arba perduodama EcoTrip komandai.'>
@@ -64,7 +64,7 @@ const AddressForm = () => {
 					</FieldContainer>
 				</div>
 
-				<div className='flex gap-[22px] items-center mb-[30px]'>
+				<div className='flex gap-[22px] items-center mb-[30px] address-fields-wrapper'>
 					<FieldContainer
 						label='Pristatymo adresas:'
 						description='Adresas, kuriame gavėjas galės atsiimti siuntą arba kuriame siunta bus palikta po pristatymo.'>
@@ -85,6 +85,16 @@ const AddressForm = () => {
 					</FieldContainer>
 				</div>
 
+				<CheckboxWithLabel>
+					<p>
+						Noriu užsakyti prekės nupirkimo paslaugą.{' '}
+						<a
+							href='/'
+							className='text-primary underline'>
+							Kas yra prekės nupirkimo paslauga ir kaip ją naudotis?
+						</a>
+					</p>
+				</CheckboxWithLabel>
 				<CheckboxWithLabel className='mb-[30px]'>
 					<p>
 						Noriu pasinaudoti EcoTrip adreso paslauga.{' '}
@@ -95,6 +105,7 @@ const AddressForm = () => {
 						</a>
 					</p>
 				</CheckboxWithLabel>
+
 				<div className='w-full flex'>
 					<SecondaryButton
 						type='submit'

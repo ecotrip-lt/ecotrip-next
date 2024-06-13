@@ -1,0 +1,15 @@
+.error-message {
+	color: #ff0000;
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: 400;
+	text-align: left;
+}
+
+.circle {
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background-color: #ff0000;
+	margin-bottom: 2px;
+}

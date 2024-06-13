@@ -2,20 +2,23 @@
 // import merge from 'lodash-es/merge';
 import Select, { Props } from 'react-select';
 import React, { forwardRef } from 'react';
+import ErrorMessage from './ErrorMessage';
 // import { styleProps } from './ReactSelectStyleProps';
 // import SimpleTextError from '../../errors/SimpleTextError';
 
 const customStyles = {
 	// @ts-ignore
-	placeholder: (provided, state) => ({
-		...provided,
-		color: '#7a777680',
-		fontFamily: 'Arial',
-		fontSize: '14px',
-		fontWeight: '400',
-		lineHeight: '16.1px',
-		textAlign: 'left',
-	}),
+	placeholder: (provided, state) => {
+		return {
+			...provided,
+			color: '#7a777680',
+			fontFamily: 'Arial',
+			fontSize: '14px',
+			fontWeight: '400',
+			lineHeight: '16.1px',
+			textAlign: 'left',
+		};
+	},
 	// @ts-ignore
 	option: (provided, state) => ({
 		...provided,
@@ -35,21 +38,30 @@ const customStyles = {
 		textAlign: 'left',
 	}),
 	// @ts-ignore
-	valueContainer: (provided, state) => ({
-		...provided,
-	}),
+	valueContainer: (provided, state) => {
+		return {
+			...provided,
+		};
+	},
 	// @ts-ignore
-	control: (provided, state) => ({
-		...provided,
-		border: '1px solid #0000001A',
-		'&:hover': {
-			border: state.isFocused ? '1px solid #9aa61e' : '1px solid #0000001A',
-		},
-		'&:focus-within': {
-			border: '1px solid #9aa61e',
-			boxShadow: 'none',
-		},
-	}),
+	control: (provided, state) => {
+		const isError = !!state.selectProps.errorMessage;
+		return {
+			...provided,
+			border: isError ? '1px solid #ff0000' : '1px solid #0000001A',
+			'&:hover': {
+				border: state.isFocused
+					? '1px solid #9aa61e'
+					: isError
+					? '1px solid #ff0000'
+					: '1px solid #0000001A',
+			},
+			'&:focus-within': {
+				border: '1px solid #9aa61e',
+				boxShadow: 'none',
+			},
+		};
+	},
 };
 
 export default forwardRef(
@@ -63,22 +75,18 @@ export default forwardRef(
 		// Type does not work with spread syntax.
 		ref: any
 	) => {
-		// styleProps must come first so that they could be overwritten by props
-		// the first argument must be an empty object, otherwise the merge will mutate the styleProps object
-		// causing all react-selects to share properties.
-		// const mergedProps = merge({}, styleProps, props);
 		return (
-			<div className='w-100'>
+			<div className='w-100 flex flex-col gap-2'>
 				<Select
 					styles={customStyles}
 					ref={ref}
 					placeholder={false}
-					// {...mergedProps}
 					{...props}
 					aria-label={`${props.name}`}
-					// data-cy={props.testId || props.name}
 				/>
-				{/* <SimpleTextError message={props.errorMessage} /> */}
+				{props.errorMessage ? (
+					<ErrorMessage message={props.errorMessage} />
+				) : null}
 			</div>
 		);
 	}

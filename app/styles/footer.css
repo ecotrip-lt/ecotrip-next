@@ -108,3 +108,9 @@
 	line-height: 16.1px;
 	padding-left: 12px;
 }
+
+@media (max-width: 640px) {
+	.footer-wrapper {
+		display: none;
+	}
+}
