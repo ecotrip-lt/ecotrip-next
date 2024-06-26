@@ -16,6 +16,8 @@ export const automotiveGoodsCategoryProducts: CommonProductTypeExample[] = [
 			from: 0,
 			to: 15,
 		},
+		volume: 0.08,
+		weight: 28,
 		specification: false,
 		visualInfo: null,
 		price: 60,

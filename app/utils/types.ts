@@ -128,7 +128,8 @@ export type CommonProductTypeExample = {
 	productType: OptionType | null;
 	size: RangeSizeType | OptionType | null;
 	specification: boolean | OptionType | null;
-	visualInfo: string | null;
+	volume: number | null;
+	weight: number | null;
 	price: number;
 	surcharge?: number;
 	sizeUnits?: string;
