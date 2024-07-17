@@ -929,8 +929,8 @@ export const automotiveGoodsCategoryProducts: CommonProductTypeExample[] = [
 			value: 'automotiveGoods',
 		},
 		productType: {
-			label: 'Automobilio variklis',
-			value: 'engine',
+			label: 'Automobilio pavarų dėžė',
+			value: 'gearbox',
 		},
 		size: {
 			from: 0,
@@ -939,7 +939,7 @@ export const automotiveGoodsCategoryProducts: CommonProductTypeExample[] = [
 		volume: 0.3,
 		weight: 30,
 		specification: false,
-		price: 45,
+		price: 50,
 	},
 	{
 		category: {
@@ -947,8 +947,8 @@ export const automotiveGoodsCategoryProducts: CommonProductTypeExample[] = [
 			value: 'automotiveGoods',
 		},
 		productType: {
-			label: 'Automobilio variklis',
-			value: 'engine',
+			label: 'Automobilio pavarų dėžė',
+			value: 'gearbox',
 		},
 		size: {
 			from: 0,
@@ -957,7 +957,7 @@ export const automotiveGoodsCategoryProducts: CommonProductTypeExample[] = [
 		volume: 0.025,
 		weight: 25,
 		specification: true,
-		price: 50,
+		price: 45,
 	},
 	{
 		category: {
@@ -965,8 +965,8 @@ export const automotiveGoodsCategoryProducts: CommonProductTypeExample[] = [
 			value: 'automotiveGoods',
 		},
 		productType: {
-			label: 'Automobilio variklis',
-			value: 'engine',
+			label: 'Automobilio pavarų dėžė',
+			value: 'gearbox',
 		},
 		size: {
 			from: 1000,
@@ -975,24 +975,6 @@ export const automotiveGoodsCategoryProducts: CommonProductTypeExample[] = [
 		volume: 0.035,
 		weight: 40,
 		specification: false,
-		price: 50,
-	},
-	{
-		category: {
-			label: 'Automobilinės prekės',
-			value: 'automotiveGoods',
-		},
-		productType: {
-			label: 'Automobilio variklis',
-			value: 'engine',
-		},
-		size: {
-			from: 1000,
-			to: 1499,
-		},
-		volume: 0.03,
-		weight: 35,
-		specification: true,
 		price: 65,
 	},
 	{
@@ -1001,8 +983,26 @@ export const automotiveGoodsCategoryProducts: CommonProductTypeExample[] = [
 			value: 'automotiveGoods',
 		},
 		productType: {
-			label: 'Automobilio variklis',
-			value: 'engine',
+			label: 'Automobilio pavarų dėžė',
+			value: 'gearbox',
+		},
+		size: {
+			from: 1000,
+			to: 1499,
+		},
+		volume: 0.03,
+		weight: 35,
+		specification: true,
+		price: 50,
+	},
+	{
+		category: {
+			label: 'Automobilinės prekės',
+			value: 'automotiveGoods',
+		},
+		productType: {
+			label: 'Automobilio pavarų dėžė',
+			value: 'gearbox',
 		},
 		size: {
 			from: 1500,
@@ -1011,7 +1011,7 @@ export const automotiveGoodsCategoryProducts: CommonProductTypeExample[] = [
 		volume: 0.4,
 		weight: 50,
 		specification: false,
-		price: 60,
+		price: 75,
 	},
 	{
 		category: {
@@ -1019,8 +1019,8 @@ export const automotiveGoodsCategoryProducts: CommonProductTypeExample[] = [
 			value: 'automotiveGoods',
 		},
 		productType: {
-			label: 'Automobilio variklis',
-			value: 'engine',
+			label: 'Automobilio pavarų dėžė',
+			value: 'gearbox',
 		},
 		size: {
 			from: 1500,
@@ -1029,7 +1029,7 @@ export const automotiveGoodsCategoryProducts: CommonProductTypeExample[] = [
 		volume: 0.035,
 		weight: 45,
 		specification: true,
-		price: 75,
+		price: 60,
 	},
 	{
 		category: {
@@ -1037,8 +1037,8 @@ export const automotiveGoodsCategoryProducts: CommonProductTypeExample[] = [
 			value: 'automotiveGoods',
 		},
 		productType: {
-			label: 'Automobilio variklis',
-			value: 'engine',
+			label: 'Automobilio pavarų dėžė',
+			value: 'gearbox',
 		},
 		size: {
 			from: 2000,
@@ -1047,7 +1047,7 @@ export const automotiveGoodsCategoryProducts: CommonProductTypeExample[] = [
 		volume: 0.045,
 		weight: 60,
 		specification: false,
-		price: 75,
+		price: 85,
 	},
 	{
 		category: {
@@ -1055,8 +1055,8 @@ export const automotiveGoodsCategoryProducts: CommonProductTypeExample[] = [
 			value: 'automotiveGoods',
 		},
 		productType: {
-			label: 'Automobilio variklis',
-			value: 'engine',
+			label: 'Automobilio pavarų dėžė',
+			value: 'gearbox',
 		},
 		size: {
 			from: 2000,
@@ -1065,7 +1065,7 @@ export const automotiveGoodsCategoryProducts: CommonProductTypeExample[] = [
 		volume: 0.4,
 		weight: 55,
 		specification: true,
-		price: 85,
+		price: 75,
 	},
 	{
 		category: {
@@ -1073,8 +1073,8 @@ export const automotiveGoodsCategoryProducts: CommonProductTypeExample[] = [
 			value: 'automotiveGoods',
 		},
 		productType: {
-			label: 'Automobilio variklis',
-			value: 'engine',
+			label: 'Automobilio pavarų dėžė',
+			value: 'gearbox',
 		},
 		size: {
 			from: 2500,
@@ -1083,24 +1083,6 @@ export const automotiveGoodsCategoryProducts: CommonProductTypeExample[] = [
 		volume: 0.05,
 		weight: 70,
 		specification: false,
-		price: 85,
-	},
-	{
-		category: {
-			label: 'Automobilinės prekės',
-			value: 'automotiveGoods',
-		},
-		productType: {
-			label: 'Automobilio variklis',
-			value: 'engine',
-		},
-		size: {
-			from: 2500,
-			to: 2999,
-		},
-		volume: 0.045,
-		weight: 65,
-		specification: true,
 		price: 120,
 	},
 	{
@@ -1109,8 +1091,26 @@ export const automotiveGoodsCategoryProducts: CommonProductTypeExample[] = [
 			value: 'automotiveGoods',
 		},
 		productType: {
-			label: 'Automobilio variklis',
-			value: 'engine',
+			label: 'Automobilio pavarų dėžė',
+			value: 'gearbox',
+		},
+		size: {
+			from: 2500,
+			to: 2999,
+		},
+		volume: 0.045,
+		weight: 65,
+		specification: true,
+		price: 85,
+	},
+	{
+		category: {
+			label: 'Automobilinės prekės',
+			value: 'automotiveGoods',
+		},
+		productType: {
+			label: 'Automobilio pavarų dėžė',
+			value: 'gearbox',
 		},
 		size: {
 			from: 3000,
@@ -1127,8 +1127,8 @@ export const automotiveGoodsCategoryProducts: CommonProductTypeExample[] = [
 			value: 'automotiveGoods',
 		},
 		productType: {
-			label: 'Automobilio variklis',
-			value: 'engine',
+			label: 'Automobilio pavarų dėžė',
+			value: 'gearbox',
 		},
 		size: {
 			from: 3000,
@@ -1145,8 +1145,8 @@ export const automotiveGoodsCategoryProducts: CommonProductTypeExample[] = [
 			value: 'automotiveGoods',
 		},
 		productType: {
-			label: 'Automobilio variklis',
-			value: 'engine',
+			label: 'Automobilio pavarų dėžė',
+			value: 'gearbox',
 		},
 		size: {
 			from: 3500,
@@ -1163,8 +1163,8 @@ export const automotiveGoodsCategoryProducts: CommonProductTypeExample[] = [
 			value: 'automotiveGoods',
 		},
 		productType: {
-			label: 'Automobilio variklis',
-			value: 'engine',
+			label: 'Automobilio pavarų dėžė',
+			value: 'gearbox',
 		},
 		size: {
 			from: 3500,
@@ -1181,8 +1181,8 @@ export const automotiveGoodsCategoryProducts: CommonProductTypeExample[] = [
 			value: 'automotiveGoods',
 		},
 		productType: {
-			label: 'Automobilio variklis',
-			value: 'engine',
+			label: 'Automobilio pavarų dėžė',
+			value: 'gearbox',
 		},
 		size: {
 			from: 4000,
@@ -1199,8 +1199,8 @@ export const automotiveGoodsCategoryProducts: CommonProductTypeExample[] = [
 			value: 'automotiveGoods',
 		},
 		productType: {
-			label: 'Automobilio variklis',
-			value: 'engine',
+			label: 'Automobilio pavarų dėžė',
+			value: 'gearbox',
 		},
 		size: {
 			from: 4000,
@@ -2322,146 +2322,7 @@ export const motorcyclesAndAccessoriesCategoryProducts: CommonProductTypeExample
 			specification: null,
 			price: 190,
 		},
-		// motorcycleGearbox Motociklo pavarų dėžė
-
-
-		// nebera naujame 
-		{
-			category: {
-				label: 'Motociklai ir priedai',
-				value: 'motorcyclesAndAccessories',
-			},
-			productType: {
-				label: 'Motociklo pavarų dėžė',
-				value: 'motorcycleGearbox',
-			},
-			size: {
-				from: 0,
-				to: 44,
-			},
-			specification: null,
-			visualInfo: null,
-			price: 45,
-		},
-		{
-			category: {
-				label: 'Motociklai ir priedai',
-				value: 'motorcyclesAndAccessories',
-			},
-			productType: {
-				label: 'Motociklo pavarų dėžė',
-				value: 'motorcycleGearbox',
-			},
-			size: {
-				from: 45,
-				to: 249,
-			},
-			specification: null,
-			visualInfo: null,
-			price: 55,
-		},
-		{
-			category: {
-				label: 'Motociklai ir priedai',
-				value: 'motorcyclesAndAccessories',
-			},
-			productType: {
-				label: 'Motociklo pavarų dėžė',
-				value: 'motorcycleGearbox',
-			},
-			size: {
-				from: 250,
-				to: 449,
-			},
-			specification: null,
-			visualInfo: null,
-			price: 65,
-		},
-		{
-			category: {
-				label: 'Motociklai ir priedai',
-				value: 'motorcyclesAndAccessories',
-			},
-			productType: {
-				label: 'Motociklo pavarų dėžė',
-				value: 'motorcycleGearbox',
-			},
-			size: {
-				from: 450,
-				to: 599,
-			},
-			specification: null,
-			visualInfo: null,
-			price: 80,
-		},
-		{
-			category: {
-				label: 'Motociklai ir priedai',
-				value: 'motorcyclesAndAccessories',
-			},
-			productType: {
-				label: 'Motociklo pavarų dėžė',
-				value: 'motorcycleGearbox',
-			},
-			size: {
-				from: 600,
-				to: 999,
-			},
-			specification: null,
-			visualInfo: null,
-			price: 90,
-		},
-		{
-			category: {
-				label: 'Motociklai ir priedai',
-				value: 'motorcyclesAndAccessories',
-			},
-			productType: {
-				label: 'Motociklo pavarų dėžė',
-				value: 'motorcycleGearbox',
-			},
-			size: {
-				from: 1000,
-				to: 1199,
-			},
-			specification: null,
-			visualInfo: null,
-			price: 110,
-		},
-		{
-			category: {
-				label: 'Motociklai ir priedai',
-				value: 'motorcyclesAndAccessories',
-			},
-			productType: {
-				label: 'Motociklo pavarų dėžė',
-				value: 'motorcycleGearbox',
-			},
-			size: {
-				from: 1200,
-				to: 1599,
-			},
-			specification: null,
-			visualInfo: null,
-			price: 150,
-		},
-		{
-			category: {
-				label: 'Motociklai ir priedai',
-				value: 'motorcyclesAndAccessories',
-			},
-			productType: {
-				label: 'Motociklo pavarų dėžė',
-				value: 'motorcycleGearbox',
-			},
-			size: {
-				from: 1600,
-				to: Infinity,
-			},
-			specification: null,
-			visualInfo: null,
-			price: 190,
-		},
+	
 		// goodsForMotorcycles Prekės motociklams
 		{
 			category: {
@@ -2473,7 +2334,7 @@ export const motorcyclesAndAccessoriesCategoryProducts: CommonProductTypeExample
 				value: 'goodsForMotorcycles',
 			},
 			size: {
-				label: 'Motociklo krepšys',
+				label: 'Motociklo krepšys (Dėžė)',
 				value: 'motorcycleBag',
 			},
 			volume: 0.01,
@@ -2789,7 +2650,7 @@ export const householdAppliancesCategoryProducts: CommonProductTypeExample[] = [
 		weight: 40,
 		size: null,
 		specification: null,
-		price: 60,
+		price: 50,
 	},
 	{
 		category: {
@@ -2819,7 +2680,7 @@ export const householdAppliancesCategoryProducts: CommonProductTypeExample[] = [
 		weight: 40,
 		size: null,
 		specification: null,
-		price: 70,
+		price: 50,
 	},
 	{
 		category: {
